@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yumemi_coding_test/answer_repository.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,7 +55,10 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 30),
             ElevatedButton(
                 onPressed: (){
-
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AnswerRepository()),
+                  );
                 },
                 child: Text('検索'))
           ],
